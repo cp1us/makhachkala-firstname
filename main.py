@@ -9,9 +9,9 @@ class LinusIsGit(QtWidgets.QMainWindow):
         super().__init__()
         uic.loadUi("UI.ui", self)
         self.figures = []
-        self.pushButton.clicked.connect(self.add_circle)
+        self.pushButton.clicked.connect(self.draw_circle)
 
-    def add_circle(self):
+    def draw_circle(self):
         diam = randint(5, 300)
         x, y = randint(0, self.width() - diam), randint(0, self.height() - diam)
         self.figures.append((x, y, diam))
